@@ -1,15 +1,15 @@
 public class Controller
 {
-    var calculator;
-    var country; // initialised based on user's location
+    TaxCalculator calculator;
+    string country; // initialised based on user's location
     var orders = new List<Invoice>(); // populate through database query
 
     switch (country)
     {
-        case 'NZ':
+        case "NZ":
             calculator = new NzTaxCalculator();
             break;
-        case 'AU':
+        case "AU":
             calculator = new AuTaxCalculator();
             break;
     }
